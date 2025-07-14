@@ -1,0 +1,4 @@
+docker build -f configs/Dockerfile -t event_serivce . --no-cache
+docker run -d --name event_serivce -p 8081:8081 --network configs_go-backend-network event_serivce
+# One-liner để redeploy nhanh
+docker stop event_serivce && docker rm event_serivce && docker rmi event_serivce && docker build -f configs/Dockerfile -t event_serivce . --no-cache && docker run -d --name event_serivce --network configs_go-backend-network -p 8081:8081 event_serivce

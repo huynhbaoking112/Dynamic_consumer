@@ -1,0 +1,23 @@
+server:
+  host: "localhost"
+  port: 8081
+
+mongodb:
+  host: "cluster0.kuw5xmn.mongodb.net"
+  port: 27017
+  database: "notification"
+  activity_log_collection: "activity_logs"
+  user: ""
+  password: ""
+  connection_string: ""
+
+rabbitmq:
+  host: "localhost"
+  port: 5672
+  user: "guest"
+  password: "guest"
+  iam_exchange: "iam_events_topic"
+  activity_log_queue: "iam_activity_log_queue"
+  activity_log_binding_key: "#.log"
+  retry_attempts: 3
+  retry_delay_seconds: 5 
