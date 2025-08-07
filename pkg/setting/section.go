@@ -18,6 +18,7 @@ type RabbitMQ struct {
 	User                  string `mapstructure:"user"`
 	Password              string `mapstructure:"password"`
 	IAMExchange           string `mapstructure:"iam_exchange"`
+	AppStoreExchange      string `mapstructure:"app_store_exchange"`
 	ActivityLogQueue      string `mapstructure:"activity_log_queue"`
 	ActivityLogBindingKey string `mapstructure:"activity_log_binding_key"`
 	RetryAttempts         int    `mapstructure:"retry_attempts"`

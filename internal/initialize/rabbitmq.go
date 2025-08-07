@@ -48,6 +48,13 @@ func InitRabbitMQ() {
 		false,
 		nil,
 	)
+	err = ch.QueueBind(
+		q.Name,                    // queue name
+		cfg.ActivityLogBindingKey, // routing key
+		cfg.AppStoreExchange,      // exchange
+		false,
+		nil,
+	)
 	if err != nil {
 		panic(fmt.Errorf("failed to bind queue: %v", err))
 	}
